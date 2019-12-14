@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+    <title>Hello KaiOS</title>
+
+    <style>
+      body {
+        border: 1px solid black;
+      }
+    </style>
+
+    <!-- Inline scripts are forbidden in Firefox OS apps (CSP restrictions), so we use a script file. -->
+    <script src="app.js" defer></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <!-- <iframe src="https://gebeya.com" style="width: 100vw; height: 100vh; border: none; outline: none;" frameborder="0"></iframe> -->
+
+    <div class="container-fluid">
+      <!-- Display a text -->
+      <h1 class="text-center">Welcome</h1>
+      <hr>
+
+      <!-- Display an image -->
+      <img src="https://picsum.photos/id/237/200/300" alt="Dog" class="img-fluid">
+      <hr>
+
+      <!-- Display a bootstrap alert -->
+      <div class="alert alert-success alert-dismissible fade show" role="alert" data-dismiss="alert" aria-label="Close">
+        <strong>Yay! The app works</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <hr>
+
+      <!-- Display a button -->
+      <button id="sayHelloButton" class="btn btn-success btn-block">Say Hello</button>
+      <hr>
+
+      <!-- Display battery level (with the help of javascript) -->
+      <h5>Your battery level</h5>
+      <div class="progress">
+        <div id="batteryLevelIndicator" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <br>
+    </div>
+  </body>
+
+</html>
